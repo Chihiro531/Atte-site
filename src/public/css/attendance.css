@@ -1,0 +1,136 @@
+/* --------------------------------共通 */
+.header_header {
+    display: flex;
+    align-items:baseline;
+}
+.header_nav {
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header li {
+    margin-right: 30px;
+}
+
+#header a {
+    font-size: 12px;
+}
+#header button {
+    border-color: transparent;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* ----------------------------- */
+
+/* main */
+#main {
+    max-width: 100%;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.777);
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5%;
+}
+.data_change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* ボタンと日付の間のスペースを調整 */
+}
+
+.data_change button {
+    background-color: #f0f0f0;
+    /* ボタンの背景色 */
+    border: 1px solid #ccc;
+    /* ボタンの境界線 */
+    border-radius: 4px;
+    /* ボタンの角の丸み */
+    padding: 10px;
+    /* ボタンの内側の余白 */
+    cursor: pointer;
+    /* ホバー時にポインターを表示 */
+}
+
+.data_change p {
+    margin: 0;
+    /* デフォルトの余白を削除 */
+    font-size: 16px;
+    /* テキストサイズ */
+}
+.attendance__table {
+    margin-top: 16px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance__row {
+    border-bottom: 1px solid #E0DFDE;
+    height: 55px;
+    text-align: center;
+}
+
+.attendance__label,
+.attendance__data {
+    padding: 20px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attendance__label:first-of-type,
+.attendance__data:first-of-type {
+    padding-left: 70px;
+    text-align: left;
+}
+
+.attendance__label:last-of-type,
+.attendance__data:last-of-type {
+    padding-right: 40px;
+}
+
+.attendance__label {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+.pagination {
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    color: blue;
+    text-align: center;
+    transition: all 0.15s linear;
+    border-radius: 5px;
+    gap: 0;
+    padding: 0;
+    margin-top: 30px;
+
+}
+.pagination>*+* {
+    border-left: solid 1px rgba(188, 186, 186, 0.807);
+}
+#main a {
+    color: rgb(4, 160, 207);
+    text-align: center;
+    padding: 8px;
+    background-color: #fff;
+    gap: 0;
+}
+#main a.isActive {
+    background: #111;
+    color: #fff;
+    pointer-events: none;
+}
+
+

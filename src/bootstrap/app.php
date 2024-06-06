@@ -43,6 +43,23 @@ $app->singleton(
 
 /*
 |--------------------------------------------------------------------------
+| Load Environment Variables
+|--------------------------------------------------------------------------
+|
+| Here we will load the environment variables for the application.
+|
+*/
+
+$environment = env('APP_ENV', 'production');
+
+$dotenv = Dotenv\Dotenv::createImmutable(
+    base_path(),
+    ".env.$environment"
+);
+$dotenv->safeLoad();
+
+/*
+|--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------
 |

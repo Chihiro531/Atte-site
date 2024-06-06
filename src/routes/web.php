@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AttendanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth')->group(function () {
+    Route::get('/', [AttendanceController::class, 'index']);
+    Route::get('/userlist', [AttendanceController::class, 'userlist']);
+    Route::get('/index', [AttendanceController::class, 'index']);
+    Route::post('/TimeIn', [AttendanceController::class, 'TimeIn']);
+    Route::post('/TimeOut', [AttendanceController::class, 'TimeOut']);
+    Route::post('/BreakIn', [AttendanceController::class, 'BreakIn']);
+    Route::post('/BreakOut', [AttendanceController::class, 'BreakOut']);
+    Route::post('/BreakTime', [AttendanceController::class, 'BreakTime']);
+    Route::post('/DutyTime', [AttendanceController::class, 'DutyTime']);
+    Route::get('/attendance', [AttendanceController::class, 'attendance']);
+    Route::get('/attendance/data/{date}', [AttendanceController::class, 'getDataByDate']);
 });

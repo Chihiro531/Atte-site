@@ -1,0 +1,97 @@
+/* 共通------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* header */
+
+#header {
+    max-width: 100%;
+    width: 1000px;
+    padding: 1%;
+}
+
+.header_header {
+    display: flex;
+    align-items: baseline;
+}
+
+/* --------------------------------共通 */
+.header_nav {
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header li {
+    margin-right: 30px;
+}
+
+#header a {
+    font-size: 12px;
+}
+#header button {
+    width:80px;
+    height: 17px;
+}
+/* ----------------------------- */
+
+/* main */
+#main {
+    max-width: 100%;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.777);
+}
+
+.attendance_alert--success {
+    color: red;
+    text-align: center;
+}
+.attendance_alert--error {
+    color: red;
+    text-align: center;
+}
+
+.push_button {
+    margin: 20px 180px;
+}
+
+.main_comment {
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+}
+
+#main input {
+    border-color: none;
+}
+
+button {
+    width: 270px;
+    height: 150px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.upper {
+    display: flex;
+}
+
+.below {
+    display: flex
+}
+
+#main li {
+    padding: 20px;
+}

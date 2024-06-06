@@ -41,4 +41,8 @@ services:
         depends_on:
             - mysql
         ports:
-            - 8080:80
+            - "8080:80"
+    mail:
+        image: mailhog/mailhog
+        ports:
+            - "8025:8025"

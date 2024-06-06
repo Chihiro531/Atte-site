@@ -1,0 +1,152 @@
+/* 共通------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* header */
+
+#header {
+    max-width: 100%;
+    width: 1000px;
+    padding: 1%;
+}
+
+.header_header {
+    display: flex;
+    align-items: baseline;
+}
+
+/* --------------------------------共通 */
+.header_nav {
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header li {
+    margin-right: 30px;
+}
+
+#header a {
+    font-size: 12px;
+}
+
+#header button {
+    width: 80px;
+    height: 17px;
+}
+
+/* ----------------------------- */
+
+/* main */
+#main {
+    max-width: 100%;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.777);
+}
+
+.attendance_alert--success {
+    color: red;
+    text-align: center;
+}
+
+.attendance_alert--error {
+    color: red;
+    text-align: center;
+}
+
+.push_button {
+    margin: 20px 180px;
+}
+
+.main_comment {
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+}
+
+#main input {
+    border-color: none;
+}
+
+button {
+    width: 270px;
+    height: 150px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.upper {
+    display: flex;
+}
+
+.below {
+    display: flex
+}
+
+.table-wrapper {
+    max-width: 860px;
+    /* テーブルの最大幅を指定 */
+    display: flex;
+    flex-wrap: wrap;
+    /* テーブルを横方向に折り返す */
+    padding-left: 7%;
+    padding-top: 5%;
+}
+
+.table-wrapper table {
+    border-collapse: collapse;
+    width: 100%;
+    /* テーブルの幅を100%に設定 */
+    margin-bottom: 20px;
+    /* テーブル間の余白を設定 */
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    height: 40px;
+    /* 行の高さを変更 */
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f2f2f2;
+    /* ヘッダーの背景色 */
+}
+
+th span {
+    display: block;
+    /* 日付を行ごとに表示 */
+}
+
+th[title] {
+    position: relative;
+}
+
+th[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px 8px;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    border-radius: 3px;
+    z-index: 10;
+}
